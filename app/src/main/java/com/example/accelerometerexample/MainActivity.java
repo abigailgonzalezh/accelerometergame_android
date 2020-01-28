@@ -68,8 +68,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         zLabel.setText(Float.toString(event.values[2]));
         lastX = event.values[0];
         lastY = event.values[1];
-        ObjectAnimator.ofFloat(hamster, "translationX", deltaX).start();
-        ObjectAnimator.ofFloat(hamster, "translationY", deltaY).start();
+        ObjectAnimator.ofFloat(hamster, "translationX", deltaX*2000).start();
+        ObjectAnimator.ofFloat(hamster, "translationY", deltaY*2000).start();
     }
 
     @Override
